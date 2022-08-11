@@ -6,13 +6,23 @@ import Settings from "./pages/settings/settings.page";
 import Single from "./pages/single/single.page";
 import Write from "./pages/write/write.page";
 
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
 function App() {
+  //for temporary test purposes
+  const user = true;
   return (
-    <>
+    <BrowserRouter>
       <TopBar/>
-      {/* <Home /> */}
-      <Register />
-    </>
+      <Routes>
+        <Route exact path={'/'} element={ <Home /> } />
+        <Route path={'/register'} element={ user ? <Home/> : <Register /> } />
+        <Route path={'/login'} element={ user ? <Home/> : <Login /> } />
+        <Route path={'/write'} element={ user ? <Write /> : <Register/> } />
+        <Route path={'/settings'} element={ user? <Settings /> : <Register/> } />
+        <Route path={'/post/:postId'} element={<Single />} />
+      </Routes>      
+    </BrowserRouter>
   );
 }
 
