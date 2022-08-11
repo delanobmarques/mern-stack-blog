@@ -8,6 +8,7 @@
     align-items: center;
     font-family: 'Josefin Sans', sans-serif;
     color: #904213;
+    z-index: 999;
 }
 
 .topLeft, .topRight {
