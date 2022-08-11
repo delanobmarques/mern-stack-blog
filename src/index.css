@@ -12,3 +12,8 @@ brown #904213
 yellow #FFBD59
 
 */
+
+.link {
+    text-decoration: none;
+    color: inherit;
+}

@@ -1,5 +1,6 @@
 import './post.styles.css';
 import postImage from "../../assets/casamento-09.jpeg";
+import { Link } from "react-router-dom";
 
 const Post = () => {
   return (
@@ -15,7 +16,7 @@ const Post = () => {
                 <div className="postCat">Decorations</div>
             </div>
             <span className="postTitle">
-                Lorem ipsum dolor sit amet consectetur adipisicing!
+                <Link className="link" to="/post/:postId"> This is the Post Title! </Link>                
             </span>
             <hr />
             <span className="postDate">1 hour ago</span>

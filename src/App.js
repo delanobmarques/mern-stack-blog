@@ -10,7 +10,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 function App() {
   //for temporary test purposes
-  const user = true;
+  const user = false;
   return (
     <BrowserRouter>
       <TopBar/>
