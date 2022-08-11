@@ -1,5 +1,5 @@
 import React from 'react';
-import './topbar.css';
+import './topbar.styles.css';
 import cinthiaImg from '../../assets/cinthia-marques.png';
 
 const TopBar = () => {
