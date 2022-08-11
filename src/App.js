@@ -1,10 +1,10 @@
+import TopBar from "./components/TopBar/topbar.component";
 
-import './App.css';
 function App() {
   return (
-    <div className="App">
-      <h1>Made With Love</h1>
-    </div>
+    <>
+      <TopBar/>
+    </>
   );
 }
 
