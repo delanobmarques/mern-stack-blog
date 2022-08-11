@@ -8,7 +8,7 @@ const Header = () => {
             <span className='headerTitleLg'>Made With Love</span>
             <span className='headerTitleSm'>by Cinthia Marques</span>
         </div>
-        <img src={headerImage} alt="Header Image" className="headerImage" />
+        <img src={headerImage} alt="Header" className="headerImage" />
     </div>
   )
 }
