@@ -3,6 +3,8 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import multer from 'multer'; //middleware for handling multipart/form-data, which is primarily used for uploading files (in this project, images)
+
 //import routes
 import authRoute from './routes/auth.js';
 import userRoute from './routes/users.js';
@@ -26,6 +28,19 @@ mongoose
     })
     .then(console.log("Connected to mongodb....."))
     .catch((error) => console.log(`${error} did not connect`));
+
+const storage = multer.diskStorage({
+    destination: (req, file, callback) => {
+        callback(null, "images")
+    }, filename: (req, file, callback) => {
+        callback(null, req.body.name)
+    }
+})
+
+const upload = multer({ storage: storage });
+app.post("/api/upload", upload.single("file"), (req, res) => {
+  res.status(200).json("File has been uploaded...");
+});
 
 app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
