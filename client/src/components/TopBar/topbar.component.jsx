@@ -9,9 +9,11 @@ const TopBar = () => {
   return (
     <div className="top">
         <div className="topLeft">
-            <i className="topIcon fa-brands fa-facebook"></i>
-            <i className="topIcon fa-brands fa-instagram"></i>
-            <i className="topIcon fa-brands fa-twitter"></i>
+            <i className="topIcon fa-brands fa-facebook" />
+            <a href="https://www.instagram.com/mwlbycinthia/" target="blank">
+                <i className="topIcon fa-brands fa-instagram" />
+            </a>
+            <i className="topIcon fa-brands fa-twitter" />
         </div>
         <div className="topCenter">
             <ul className="topList">

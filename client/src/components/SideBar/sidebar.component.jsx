@@ -24,7 +24,7 @@ const SideBar = () => {
             <span className="sidebarTitle">FOLLOW US</span> 
             <div className="sidebarSocial">
                 <i className="sidebarIcon fa-brands fa-facebook"></i>
-                <i className="sidebarIcon fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/mwlbycinthia/" target="blank"><i className="sidebarIcon fa-brands fa-instagram"/></a>
                 <i className="sidebarIcon fa-brands fa-twitter"></i>
             </div>
         </div>
