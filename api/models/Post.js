@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 // creating a mongoose post schema
-const PostSchema = new mongoose.Schema(
+const postSchema = new mongoose.Schema(
     {
       title: {
         type: String,
@@ -28,5 +28,8 @@ const PostSchema = new mongoose.Schema(
     { timestamps: true }
   );
   
-  //export post model schema
-  module.exports = mongoose.model("Post", PostSchema);
+
+//turning schema into a model
+const Post = mongoose.model('Post', postSchema);
+//export mongoose model 
+export default Post;

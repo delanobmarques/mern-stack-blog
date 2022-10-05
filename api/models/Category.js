@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 
 // creating a mongoose category schema
-const CategorySchema = new mongoose.Schema(
+const categorySchema = new mongoose.Schema(
     {
       name: {
         type: String,
@@ -12,5 +12,7 @@ const CategorySchema = new mongoose.Schema(
     { timestamps: true }
   );
   
-  //export category model schema
-  module.exports = mongoose.model("Category", CategorySchema);
+//turning schema into a model
+const Category = mongoose.model('Category', categorySchema);
+//export mongoose model 
+export default Category;
