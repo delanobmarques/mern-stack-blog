@@ -1,23 +1,25 @@
 import './post.styles.css';
-import postImage from "../../assets/casamento-09.jpeg";
 import { Link } from "react-router-dom";
 
 const Post = ({post}) => {
   return (
     <div className="post">
-        <img 
-            className="postImage" 
-            src={postImage} 
-            alt="post" 
-        />
+        {post.photo && (
+            <img 
+                className="postImage" 
+                src={post.photo} 
+                alt={ post.title } 
+            />
+        )}        
         <div className="postInfo">
-            <div className="postCats">
-                <div className="postCat">Cakes</div>
-                <div className="postCat">Decorations</div>
+            <div className="postCats"> 
+                { post.categories.map((category) => (
+                    <span className="postCat">{category.name}</span>
+                ))}                
             </div>
-            <span className="postTitle">
-                <Link className="link" to="/post/:postId"> {post.title} </Link>                
-            </span>
+            <Link to={`/post/${post._id}`} className="link">
+                <span className="postTitle">{post.title}</span>
+            </Link>
             <hr />
             <span className="postDate"> {new Date(post.createdAt).toDateString()} </span>
         </div>
