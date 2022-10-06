@@ -1,10 +1,7 @@
-// mongodb+srv://blog-app:<password>@cluster0.atgnbdl.mongodb.net/?retryWrites=true&w=majority
-
 import express from 'express';
 import dotenv from 'dotenv';
 import mongoose from 'mongoose';
 import multer from 'multer'; //middleware for handling multipart/form-data, which is primarily used for uploading files (in this project, images)
-
 //import routes
 import authRoute from './routes/auth.js';
 import userRoute from './routes/users.js';
