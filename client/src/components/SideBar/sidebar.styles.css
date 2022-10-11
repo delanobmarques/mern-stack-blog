@@ -66,4 +66,9 @@
     font-size: 16px;
     margin-left: 12px;
     cursor: pointer;
+    color:#642f0d;
+}
+
+.sidebarIcon:hover {    
+    color:#FFBD59;
 }

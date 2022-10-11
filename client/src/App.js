@@ -7,17 +7,19 @@ import Single from "./pages/single/single.page";
 import Write from "./pages/write/write.page";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useContext } from "react";
+import { Context } from "./context/Context";
 
 function App() {
-  //for temporary test purposes
-  const user = false;
+  const { user } = useContext(Context);
+
   return (
     <BrowserRouter>
       <TopBar/>
       <Routes>
         <Route exact path={'/'} element={ <Home /> } />
-        <Route path={'/register'} element={ user ? <Home/> : <Register /> } />
-        <Route path={'/login'} element={ user ? <Home/> : <Login /> } />
+        {/* <Route path={'/register'} element={ user ? <Home/> : <Register /> } /> */}
+        <Route path={'/admin-login'} element={ user ? <Home/> : <Login /> } />
         <Route path={'/write'} element={ user ? <Write /> : <Register/> } />
         <Route path={'/settings'} element={ user? <Settings /> : <Register/> } />
         <Route path={'/post/:postId'} element={<Single />} />

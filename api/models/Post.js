@@ -26,8 +26,7 @@ const postSchema = new mongoose.Schema(
       },
     },
     { timestamps: true }
-  );
-  
+  );  
 
 //turning schema into a model
 const Post = mongoose.model('Post', postSchema);

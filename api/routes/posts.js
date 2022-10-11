@@ -1,9 +1,8 @@
 import express from "express";
 //setup router
-const router = express.Router(); // const router = require("express").Router();
-//import user model
+const router = express.Router();
+//import models
 import User from "../models/User.js";
-//import post model
 import Post from "../models/Post.js";
 
 //CREATE POST ROUTE
@@ -95,4 +94,3 @@ router.get("/", async (req, res) => {
 });
   
 export default router;
-// module.exports = router;

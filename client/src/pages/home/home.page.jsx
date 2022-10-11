@@ -9,11 +9,11 @@ import { useLocation } from 'react-router-dom';
 
 const Home = () => {
   const [posts, setPosts] = useState([]);
-  const { search } = useLocation;
+  const { search } = useLocation();
 
   useEffect(() => {
     const getPosts = async () => {
-      const response = await axios.get("/posts");
+      const response = await axios.get("/posts" + search);
       setPosts(response.data);
     };
     getPosts();

@@ -62,3 +62,9 @@
     border-radius: 10px;
     font-family: 'Josefin Sans', sans-serif;
   }
+
+  .register .error-message {
+    margin-top: .75rem;
+    color: #ff0000;
+    font-size: 1.25rem;
+  }
