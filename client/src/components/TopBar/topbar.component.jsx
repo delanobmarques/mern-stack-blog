@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import './topbar.styles.css';
 import { Link } from "react-router-dom";
 import { Context } from '../../context/Context';
+import menu from "../../assets/menu.pdf";
 
 const TopBar = () => {
     const { user, dispatch } = useContext(Context);
@@ -31,7 +32,7 @@ const TopBar = () => {
                         <a className='link' href="#contact">CONTACT</a>
                     </li>
                     <li className="topListItem">
-                        <Link className='link' to="/menu">MENU</Link>
+                        <a className='link' target="_blank"  href={ menu } rel="noreferrer">MENU</a>
                     </li>
                     <li className="topListItem">
                         {user && <Link className='link' to="/write">WRITE</Link>}
