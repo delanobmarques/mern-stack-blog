@@ -1,7 +1,6 @@
 import './sidebar.styles.css';
 import aboutImage from '../../assets/cinthia-marques-02.png'
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
@@ -19,7 +18,7 @@ const SideBar = () => {
     return (
         <div className='sidebar'>
             <div className="sidebarItem">
-                <span className="sidebarTitle">ABOUT ME</span> 
+                <span className="sidebarTitle" id="about">ABOUT ME</span> 
                 <img className='sidebarImage' src={aboutImage} alt="Cinthia Marques" />
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ex neque, consequuntur nulla eveniet magnam reiciendis quidem quod! Cupiditate, eum at?</p>
             </div>
@@ -36,7 +35,7 @@ const SideBar = () => {
             </div>
 
             <div className="sidebarItem">
-                <span className="sidebarTitle">CONTACT</span> 
+                <span className="sidebarTitle" id="contact">CONTACT</span> 
                 <div className="sidebarSocial">
                     <a href="mailto: mwlbycinthia@gmail.com" target="blank">
                         <i className="fa fa-envelope sidebarIcon" aria-hidden="true"></i>

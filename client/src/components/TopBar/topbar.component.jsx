@@ -25,13 +25,13 @@ const TopBar = () => {
                         <Link className='link' to="/">HOME</Link>
                     </li>
                     <li className="topListItem">
-                        <Link className='link' to="/">ABOUT</Link>
+                        <a className='link' href="#about">ABOUT</a>
                     </li>
                     <li className="topListItem">
-                        <Link className='link' to="/">CONTACT</Link>
+                        <a className='link' href="#contact">CONTACT</a>
                     </li>
                     <li className="topListItem">
-                        <Link className='link' to="/">MENU</Link>
+                        <Link className='link' to="/menu">MENU</Link>
                     </li>
                     <li className="topListItem">
                         {user && <Link className='link' to="/write">WRITE</Link>}
